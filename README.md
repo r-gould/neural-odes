@@ -10,7 +10,7 @@ main.py demonstrates the model on the MNIST dataset, where an example of trainin
 
 Below shows the accuracies on MNIST after training for 5 epochs for each solver,
 
-![results](images/accuracies.png)
+![](images/results.png)
 
 # References
 
