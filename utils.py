@@ -10,8 +10,8 @@ def load_mnist(batch_size):
         transforms.ToTensor()
     ])
 
-    train_ds = MNIST(root="neural-odes/data/", train=True, download=True, transform=transform)
-    valid_ds = MNIST(root="neural-odes/data/", train=False, download=True, transform=transform)
+    train_ds = MNIST(root="data/", train=True, download=True, transform=transform)
+    valid_ds = MNIST(root="data/", train=False, download=True, transform=transform)
     
     train_dl = DataLoader(train_ds, batch_size, shuffle=True)
     valid_dl = DataLoader(valid_ds, batch_size, shuffle=True)
@@ -32,7 +32,7 @@ def plot_stats(train_stats, valid_stats):
     plt.plot(train_losses, label="Train")
     plt.plot(valid_losses, label="Valid")
     plt.legend(loc="upper right")
-    plt.savefig("neural-odes/plots/losses.png")
+    plt.savefig("plots/losses.png")
     plt.show()
 
     plt.title("Accuracies")
@@ -41,5 +41,5 @@ def plot_stats(train_stats, valid_stats):
     plt.plot(train_accs, label="Train")
     plt.plot(valid_accs, label="Valid")
     plt.legend(loc="upper left")
-    plt.savefig("neural-odes/plots/accs.png")
+    plt.savefig("plots/accs.png")
     plt.show()
